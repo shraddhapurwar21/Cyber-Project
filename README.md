@@ -1,0 +1,2 @@
+HoneyPot  
+A honeypot is a decoy system or service designed to lure attackers into interacting with it, while allowing security teams to gather valuable data about attack methods, tools, and techniques. It enhances server security by attracting malicious traffic, thus providing insights into attacker behavior, which helps to refine defensive strategies. Unlike traditional security measures like firewalls, honeypots actively capture attack details, which can be used to enhance existing defenses.
