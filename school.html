@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007BFF;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            max-width: 300px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our School</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('register')">Register</a></li>
+                <li><a href="#" onclick="showSection('login')">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="home" class="section">
+            <h2>About Our School</h2>
+            <p>We provide quality education for all students.</p>
+        </div>
+
+        <div id="register" class="section hidden">
+            <h2>Register</h2>
+            <form id="registrationForm">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" name="username" required>
+                
+                <label for="regEmail">Email:</label>
+                <input type="email" id="regEmail" name="email" required>
+                
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" name="password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div id="login" class="section hidden">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="username" required>
+                
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our School</p>
+    </footer>
+
+    <script>
+        function showSection(section) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((sec) => {
+                sec.classList.add('hidden');
+            });
+            document.getElementById(section).classList.remove('hidden');
+        }
+
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Registration successful! Please log in.');
+            showSection('login'); // Redirect to login after registration
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Login successful!');
+            // You would typically validate credentials here.
+        });
+    </script>
+</body>
+</html>
