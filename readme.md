@@ -10,6 +10,9 @@ This project implements a low-interaction honeypot for monitoring and analyzing 
 - **Honeypot**: Provides fake file system.
 - **RealTimeMonitoring**: Provide real time notification using canary token .
 
+  To know How the project is working Please check this link to understand the full working of the project.
+  -  https://drive.google.com/file/d/1XO4dx6v4vd3WDy-zLG_FYOotpMoon70I/view?usp=sharing
+
 ## Getting Started
 
 ### Prerequisites
